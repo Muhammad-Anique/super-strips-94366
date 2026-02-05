@@ -1,0 +1,127 @@
+:root {
+    /* Color Palette */
+    --color-black: #050505;
+    --color-dark-blue: #00122e;
+    --color-accent-blue: #0055ff;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #a0aec0;
+    --color-error: #ff4d4d;
+    --color-success: #00e676;
+    
+    /* Spacing & Sizing */
+    --container-max-width: 1100px;
+    --transition-speed: 0.2s;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    padding: 2rem 0;
+    background: linear-gradient(to bottom, var(--color-dark-blue), var(--color-black));
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-accent-blue);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 5rem 0 3rem;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Benefits Section */
+.benefit-section {
+    padding: 4rem 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background: var(--color-dark-blue);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform var(--transition-speed) ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-blue);
+}
+
+.benefit-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-accent-blue);
+}
+
+.benefit-card p {
+    color: var(--color-text-secondary);
+}
+
+/* Waitlist Section */
+.waitlist-section {
+    padding: 6rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    background: linear-gradient(145deg, #0a0a0a, #00122e);
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 85, 255, 0.2);
+    text-align: center;
+}
+
+.form-header h2 {
+    font-size:
